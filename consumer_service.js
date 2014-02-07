@@ -23,4 +23,8 @@ app.get('/startStopFare/:x1/:y1/:x2/:y2', function (req, res) {
   res.json(store.startStopFare(req.params['x1'], req.params['y1'], req.params['x2'], req.params['y2']));
 });
 
+app.get('/numTripsAt/:time', function (req, res) {
+  res.json(store.numTripsAt(parseInt(req.params['time'], 10)));
+});
+
 app.listen(3000);

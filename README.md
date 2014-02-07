@@ -18,7 +18,7 @@ which can then be queried over http
 $ curl localhost:3000/startStopFare/5/5/20/20
 ```
 
-there are also some shitty tests
+there are also some shitty tests. they suck and I feel badly about this.
 
 ```
 $ node test.js

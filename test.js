@@ -89,16 +89,26 @@ var trip2 = [ { event: 'begin',
     lng: 18,
     fare: 29 } ];
 
-function addTrip(store, trip) {
-  for (var i = 0; i < trip.length; i++) store.add(trip[i]);
+function addTrip(startTime, store, trip) {
+  var currTime = startTime;
+  for (var i = 0; i < trip.length; i++) {
+    trip[i].time = currTime;
+    currTime += 1;
+
+    store.add(trip[i]);
+  }
 }
 
 var store = new Store();
 
-addTrip(store, trip1);
+addTrip(0, store, trip1);
 assert(store.numTripsThrough(34, 0, 36, 2) == 1);
 
-addTrip(store, trip2);
+assert(store.numTripsAt(4) == 1);
+
+addTrip(5, store, trip2);
 assert(store.numTripsThrough(34, 0, 36, 2) == 1);
 assert(store.numTripsThrough(12, 0, 36, 8) == 2);
 
+assert(store.numTripsAt(4) == 1);
+assert(store.numTripsAt(8) == 2);

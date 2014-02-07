@@ -15,6 +15,8 @@ var lastId = 500;
 function step (id) {
   var next = trips[id].shift();
 
+  next.time = Math.floor(Date.now() / 1000);
+
   // If a trip ends, replace it with a new trip
   if (next.event == "end") {
     trips[id] = fuzzer.generateTrip(lastId++);
