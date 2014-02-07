@@ -34,3 +34,5 @@ each point and change direction periodically.
 
 The stats endpoint will give you RSS and the # of stored trips and points.
 On my mbp, I get ~20ms query time with about 8k trips and 221k points.
+
+### Interval tree stolen from https://github.com/shinout/interval-tree
