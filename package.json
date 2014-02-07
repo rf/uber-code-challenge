@@ -1,0 +1,22 @@
+{
+  "name": "uberchallenge",
+  "version": "0.0.0",
+  "description": "uber coding challenge",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "rbush": "*",
+    "sortedlist": "*",
+    "lodash": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:rf/uber-code-challenge"
+  },
+  "author": "Russ Frank <me@russfrank.us>",
+  "license": "BSD",
+  "gitHead": "59285452ac34afe6d667a53e505cbe32a9b77d22",
+  "readmeFilename": "README.md"
+}
