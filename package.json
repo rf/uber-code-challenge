@@ -9,7 +9,10 @@
   "dependencies": {
     "rbush": "*",
     "sortedlist": "*",
-    "lodash": "*"
+    "lodash": "*",
+    "socket.io": "*",
+    "socket.io-client": "*",
+    "express": "*"
   },
   "repository": {
     "type": "git",
